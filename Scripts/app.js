@@ -15,10 +15,10 @@ let app;
     console.log("%cDeclaring Variables", "color: red;")
     let largeButtons;
     let h3Name;
-    let h3ParentTag;
-    let contentArea;
     let firstparagraph;
     let learnButtonText;
+    let paragraphParent;
+    let largeButton;
     /**
      * Variable initialization in this function
      *
@@ -30,11 +30,12 @@ let app;
         largeButtons.innerHTML = "Learn More";
 
         // Creates a h3 tag with my name and student id
-        contentArea = document.getElementById("contentArea")
-
+        largeButton = document.getElementById('largeButton');
+        paragraphParent = largeButton.parentNode;
         h3Name = document.createElement('h3');
         h3Name.innerHTML = 'Name: Joshua Welby 100663217';
-        contentArea.appendChild(h3Name);
+
+        paragraphParent.insertBefore(h3Name, largeButton);
 
 
         // replaces firstparagraph with new text
@@ -68,9 +69,6 @@ let app;
                 // Shows firstparagraph when the button text is hide details
                 firstparagraph.hidden = true;
             }
-
-
-
         })
     }
 
