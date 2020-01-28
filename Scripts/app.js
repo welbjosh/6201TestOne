@@ -1,7 +1,7 @@
 /*
-    Student Name  :
-    StudentID     :
-    Date Completed:
+    Student Name  : Joshua Welby
+    StudentID     : 100663217
+    Date Completed: 2020-01-28
 */
 
 "use strict";
@@ -17,6 +17,7 @@ let app;
     let h3Name;
     let h3ParentTag;
     let contentArea;
+    let firstparagraph;
     /**
      * Variable initialization in this function
      *
@@ -35,9 +36,15 @@ let app;
         contentArea.appendChild(h3Name);
 
 
-        // Hides the h3 paragraph made above
-
+        // replaces firstparagraph with new text
+        firstparagraph = document.getElementById('firstParagraph')
+        firstparagraph.innerHTML = "JavaScript is a prototype-based language, and every object in JavaScript has a hidden internal property called Prototype that can be used to extend object properties and methods."
         
+        // hides the firstparagraph
+        firstparagraph.hidden = true;
+
+        // adds a click event to the large button
+
         Main();
     }
 
