@@ -18,6 +18,7 @@ let app;
     let h3ParentTag;
     let contentArea;
     let firstparagraph;
+    let learnButtonText;
     /**
      * Variable initialization in this function
      *
@@ -43,8 +44,6 @@ let app;
         // hides the firstparagraph
         firstparagraph.hidden = true;
 
-        // adds a click event to the large button
-
         Main();
     }
 
@@ -54,7 +53,25 @@ let app;
      */
     function Main()
     {
+        // Adds a click event to the large button
+        learnButtonText = document.getElementById('largeButton');
 
+        learnButtonText.addEventListener("click", function(){
+            // Make the text of the button toggle between hide details and learn more
+            if (largeButtons.textContent == "Learn More"){
+                largeButtons.textContent = "Hide Details";
+                // Hides firstparagraph when the button text is learn more
+                firstparagraph.hidden = false;
+            }
+            else if (largeButtons.textContent == "Hide Details"){
+                largeButtons.textContent = "Learn More";
+                // Shows firstparagraph when the button text is hide details
+                firstparagraph.hidden = true;
+            }
+
+
+
+        })
     }
 
 
